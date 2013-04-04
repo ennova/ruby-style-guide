@@ -143,9 +143,10 @@ Translations of the guide are available in the following languages:
 
 * Indent `when` as deep as `case`. I know that many would disagree
   with this one, but it's the style established in both "The Ruby
-  Programming Language" and "Programming Ruby".
+  Programming Language" and "Programming Ruby". Try not to use `then`.
 
     ```Ruby
+    # good
     case
     when song.name == 'Misty'
       puts 'Not again!'
@@ -156,7 +157,8 @@ Translations of the guide are available in the following languages:
     else
       song.play
     end
-    
+
+    # good
     result = case beer
     when 'Asahi'
       'Good'
@@ -164,6 +166,7 @@ Translations of the guide are available in the following languages:
       'Maybe good'
     end
 
+    # bad
     kind = case year
     when 1850..1889 then 'Blues'
     when 1890..1909 then 'Ragtime'
