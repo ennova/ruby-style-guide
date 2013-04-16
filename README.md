@@ -1396,10 +1396,10 @@ strings.
 
     ```Ruby
     # bad
-    hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
+    hash = {'one' => 1, 'two' => 2, 'three' => 3}
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 * Avoid the use of mutable objects as hash keys.
@@ -1407,16 +1407,16 @@ strings.
 
     ```Ruby
     # bad
-    hash = { :one => 1, :two => 2, :three => 3 }
+    hash = {:one => 1, :two => 2, :three => 3}
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 * Use `fetch` when dealing with hash keys that should be present.
 
     ```Ruby
-    heroes = { batman: 'Bruce Wayne', superman: 'Clark Kent' }
+    heroes = {batman: 'Bruce Wayne', superman: 'Clark Kent'}
     # bad - if we make a mistake we might not spot it right away
     heroes[:batman] # => "Bruce Wayne"
     heroes[:supermann] # => nil
