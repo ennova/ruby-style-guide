@@ -1402,6 +1402,16 @@ strings.
     hash = {one: 1, two: 2, three: 3}
     ```
 
+* Don't put spaces inside hash braces.
+
+    ```Ruby
+    # bad
+    hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
+
+    # good
+    hash = {'one' => 1, 'two' => 2, 'three' => 3}
+    ```
+
 * Avoid the use of mutable objects as hash keys.
 * Use the hash literal syntax when your hash keys are symbols.
 
