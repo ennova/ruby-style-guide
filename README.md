@@ -1619,6 +1619,42 @@ strings.
 
 * Prefer `()` as delimiters for all `%` literals.
 
+## Line Breaks
+
+* When there are multiple values on a line, prefer group related values together:
+
+    ```ruby
+    # Bad
+    [
+      :tags, :resources, :work_date, :person_includes,
+      :equipment_item_includes, :equipment_supervisor_id,
+      :people_supervisor_id
+    ]
+
+    attr_reader \
+      :resource,
+      :work_date,
+      :tags,
+      :person_includes,
+      :equipment_item_includes,
+      :equipment_supervisor_id,
+      :people_supervisor_id
+
+    attr_reader :resource, :work_date, :tags, :person_includes, :equipment_item_includes, :equipment_supervisor_id, :people_supervisor_id
+
+    # God
+    [
+      :resources, :work_date, :tags,
+      :person_includes, :equipment_item_includes,
+      :equipment_supervisor_id, :people_supervisor_id
+    ]
+
+    attr_reader \
+      :resource, :work_date, :tags,
+      :person_includes, :equipment_item_includes,
+      :equipment_supervisor_id, :people_supervisor_id
+
+     ```
 ## Metaprogramming
 
 * Avoid needless metaprogramming.
